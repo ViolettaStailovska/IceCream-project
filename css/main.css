@@ -71,6 +71,44 @@ a {
   text-decoration: none;
 }
 
+.slick-dots li:not(:last-child) {
+  margin-right: 18px;
+}
+
+.slick-dots li {
+  height: 12px;
+  width: 12px;
+  margin: 0;
+  border-radius: 50%;
+  border: transparent;
+  background-color: #d9d9d9;
+  background-image: url("../images/desktop/slide-passive.svg");
+}
+
+.slick-dots li.slick-active {
+  background-image: url("../images/desktop/slide-active.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  border-radius: 0;
+  -webkit-transition: background-color 0ms linear;
+  transition: background-color 0ms linear;
+}
+
+.slick-dots li button {
+  height: 12px;
+  width: 12px;
+  color: transparent;
+  border-radius: 50%;
+  border: transparent;
+  background-color: #d9d9d9;
+  -webkit-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
+}
+.slick-dots li button::before {
+  display: none;
+}
+
 .page-header {
   padding-top: 6px;
 }
@@ -508,6 +546,22 @@ a {
 }
 .button__link--white:hover, .button__link--white:focus {
   background-color: #ecebeb;
+}
+
+.home {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  opacity: 0.7;
+  background-color: #ffb8ca;
+  background-image: url("../images/icon-go-to-home.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 50% 50%;
+  border-radius: 5px;
 }
 
 .mobile-menu {
@@ -2290,7 +2344,7 @@ a {
 /* Стили к кнопке закрытия модального окна */
 .modal-form__btn {
   position: relative;
-  bottom: -25px;
+  bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
